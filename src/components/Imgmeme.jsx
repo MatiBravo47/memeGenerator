@@ -5,8 +5,8 @@ import './Imgmeme.css'
 const Imgmeme = ()=>{
 
     const [imgmeme, setImgmeme] = useState();
-    const [textmeme, setTextmeme] = useState();
-    const [textmeme2, setTextmeme2] = useState();
+    const [toptextmeme, setTopTextmeme] = useState();
+    const [bottomtextmeme, setBottomTextmeme] = useState();
 
     const seleccionarImg = (e) => {
         setImgmeme(e.target.value);
@@ -14,11 +14,11 @@ const Imgmeme = ()=>{
     }
 
     const topText = (e) => {
-        setTextmeme(e.target.value);
+        setTopTextmeme(e.target.value);
         console.log(e.target.value);
     }
     const bottomText = (e) => {
-        setTextmeme2(e.target.value);
+        setBottomTextmeme(e.target.value);
         console.log(e.target.value);
     }
 
@@ -27,7 +27,7 @@ const Imgmeme = ()=>{
             {/*document.body.appendChild(canvas);*/}
             let img = canvas.toDataURL("memes/jpg");
             let link = document.createElement("a");
-            link.download = "memepropio.jpg";
+            link.download = "memegenerator.jpg";
             link.href = img;
             link.click();
         });
@@ -50,8 +50,8 @@ const Imgmeme = ()=>{
             </select>
             <div className='d-flex justify-content-center'>
             <figure className="position-relative bg-dark" id="exportar">
-                <p className="w-100 px-40 position-absolute top-0 start-25 h2 text-white">{textmeme} </p>
-                <p className="w-100 px-40 position-absolute bottom-0 start-25 h2 text-white">{textmeme2} </p> 
+                <p className="w-100 px-40 position-absolute top-0 start-25 h2 text-white">{toptextmeme} </p>
+                <p className="w-100 px-40 position-absolute bottom-0 start-25 h2 text-white">{bottomtextmeme} </p> 
                 <img src={`./memes/${imgmeme}.jpg`} className="figure-img w-100 h-80 mt-5 mb-5 d-block m-auto" alt="meme" />
             </figure>
             </div>
