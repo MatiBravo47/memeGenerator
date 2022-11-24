@@ -4,7 +4,7 @@ import './Imgmeme.css'
 
 const Imgmeme = ()=>{
 
-    const [imgmeme, setImgmeme] = useState();
+    const [imgmeme, setImgmeme] = useState(1);
     const [toptextmeme, setTopTextmeme] = useState();
     const [bottomtextmeme, setBottomTextmeme] = useState();
 
@@ -51,13 +51,16 @@ const Imgmeme = ()=>{
               <figure className="position-relative bg-dark" id="exportar">
                 <p className="w-100 px-40 position-absolute top-0 start-25 h2 text-white">{toptextmeme} </p>
                 <p className="w-100 px-40 position-absolute bottom-0 start-25 h2 text-white">{bottomtextmeme} </p> 
-                <img src={`./memes/${imgmeme}.jpg`} className="figure-img w-100 h-80 mt-5 mb-5 d-block m-auto" alt="meme" />
+                <img src={`./memes/${imgmeme}.jpg`}  className="figure-img w-100 h-80 mt-5 mb-5 d-block m-auto" alt="meme" />
               </figure>
             </div>
             <h3 className='mt-3 mb-3 text-center'>Ingrese el texto del meme</h3>
             <input onChange={topText} className='form-control w-50 m-50 m-auto d-block' type="text" placeholder="Texto superior" name="meme" arial-label="default input example" ></input>
             <input onChange={bottomText} className='form-control w-50 m-50 m-auto d-block mt-3' type="text" placeholder="Texto inferior" name="meme" arial-label="default input example" ></input>
-
+            
+            {/* <label for="exampleColorInput" class="form-label">Color picker</label>
+            <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color"></input> */}
+            
             <button onClick={Descargar} type="button" className='btn btn-primary mt-3 mb-4'>Descargar meme</button>
 
           </div>
