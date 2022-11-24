@@ -37,7 +37,7 @@ const Imgmeme = ()=>{
     return(
         <div className='text-center container'>
         <div className='row d-flex justify-content-center'>
-        <div className='col-12 col-sm-12 col-md-8'>
+        <div className='col-12 col-sm-12 col-md-6'>
             <h1 className='mt-3 mb-3 text-center'>Editá tu propio meme</h1>
 
             <h3 className='mt-3 mb-3 text-center'>Elegí tu meme</h3>
