@@ -55,11 +55,11 @@ const Imgmeme = ()=>{
               </figure>
             </div>
             <h3 className='mt-3 mb-3 text-center'>Ingrese el texto del meme</h3>
-            <input onChange={topText} className='form-control w-50 m-50 m-auto d-block' type="text" placeholder="Texto superior" name="meme" arial-label="default input example" ></input>
+            <input onChange={topText} className='form-control w-50 m-50 m-auto d-block te' type="text" placeholder="Texto superior" name="meme" arial-label="default input example" ></input>
             <input onChange={bottomText} className='form-control w-50 m-50 m-auto d-block mt-3' type="text" placeholder="Texto inferior" name="meme" arial-label="default input example" ></input>
             
-            {/* <label for="exampleColorInput" class="form-label">Color picker</label>
-            <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color"></input> */}
+            <label for="exampleColorInput" class="form-label">Color picker</label>
+            <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color"></input>
             
             <button onClick={Descargar} type="button" className='btn btn-primary mt-3 mb-4'>Descargar meme</button>
 
