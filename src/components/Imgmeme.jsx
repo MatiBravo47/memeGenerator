@@ -35,7 +35,7 @@ const Imgmeme = ()=>{
     }
 
     return(
-        <div className='text-center'>
+        <div className='text-center container'>
             <h1 className='mt-3 mb-3 text-center'>Editá tu propio meme</h1>
 
             <h3 className='mt-3 mb-3 text-center'>Elegí tu meme</h3>
@@ -46,10 +46,10 @@ const Imgmeme = ()=>{
                 <option value={4}>Pikachu</option>
             </select>
             <div className='d-flex justify-content-center'>
-            <figure className="position-relative w-50" id="exportar">
-                <p className="w-100 px-30 position-absolute top-25 start-25  h2 ">{textmeme} </p>
-                <p className="w-100 px-30 position-absolute bottom-0 start-25  h2 ">{textmeme2} </p> 
-                <img src={`./memes/${imgmeme}.jpg`} className="figure-img mt-3 d-block m-auto" alt="meme" />
+            <figure className="position-relative w-50 bg-dark" id="exportar">
+                <p className="w-100 px-40 position-absolute top-0 start-25 h2 text-white">{textmeme} </p>
+                <p className="w-100 px-40 position-absolute bottom-0 start-25 h2 text-white">{textmeme2} </p> 
+                <img src={`./memes/${imgmeme}.jpg`} className="figure-img w-100 h-80 mt-5 mb-5 d-block m-auto" alt="meme" />
             </figure>
             </div>
             <h3 className='mt-3 mb-3 text-center'>Ingrese el texto del meme</h3>
