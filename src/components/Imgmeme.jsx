@@ -36,6 +36,8 @@ const Imgmeme = ()=>{
 
     return(
         <div className='text-center container'>
+        <div className='row d-flex justify-content-center'>
+        <div className='col-12 col-sm-12 col-md-8'>
             <h1 className='mt-3 mb-3 text-center'>Editá tu propio meme</h1>
 
             <h3 className='mt-3 mb-3 text-center'>Elegí tu meme</h3>
@@ -46,7 +48,7 @@ const Imgmeme = ()=>{
                 <option value={4}>Pikachu</option>
             </select>
             <div className='d-flex justify-content-center'>
-            <figure className="position-relative w-50 bg-dark" id="exportar">
+            <figure className="position-relative bg-dark" id="exportar">
                 <p className="w-100 px-40 position-absolute top-0 start-25 h2 text-white">{textmeme} </p>
                 <p className="w-100 px-40 position-absolute bottom-0 start-25 h2 text-white">{textmeme2} </p> 
                 <img src={`./memes/${imgmeme}.jpg`} className="figure-img w-100 h-80 mt-5 mb-5 d-block m-auto" alt="meme" />
@@ -58,6 +60,8 @@ const Imgmeme = ()=>{
 
             <button onClick={Descargar} type="button" className='btn btn-primary mt-4 mb-4'>Descargar meme</button>
 
+        </div>
+        </div>
         </div>
     );
 
