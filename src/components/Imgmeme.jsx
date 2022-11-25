@@ -60,6 +60,7 @@ const Imgmeme = ()=>{
         <div className='row d-flex justify-content-center'>
           <div className='col-8 col-sm-18 col-md-6'>
             <h1 className='mt-3 mb-3 text-center text-white'>Editá tu propio meme</h1>
+            <img src="../../public/memes/Wait-A-Minute-Memes.jpeg" className='meme-inicio'/>
             <h3 className='mt-3 mb-3 text-center text-white'>Elegí tu meme</h3>
             <select onChange={seleccionarImg} className='form-select form-select-lg mb-3 w-50 m-auto' arial-label=".form-select-lg example" >
               <option value={1}>Coreanita</option>
@@ -81,6 +82,8 @@ const Imgmeme = ()=>{
 
             <button onClick={Descargar} type="button" className='btn btn-primary mt-3 mb-4'>Descargar meme</button>
             <div>
+            <h3 className='mt-3 mb-3 text-center text-white'>Personalizalo</h3>
+            <img src='./../../public/memes/icons8-salt-bae-50.png'/>
             <h3 className='mt-3 mb-3 text-center text-white'>Elegí color de texto</h3>
             <div>
               { renderButtons(colors) }
