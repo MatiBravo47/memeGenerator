@@ -8,12 +8,22 @@ const Imgmeme = ()=>{
 
   const [color, setColor] = useState('white')
 
+  const [margen, setMargen] = useState('mt-3')
+
   const colors = ['blanco', 'amarillo', 'rojo', 'azul', 'verde']
+
+  const margin = ['mt-5 mb-5', '']
+
+  const conMargen = margin => {
+    return margin.map((margen, index) => {
+      if (index=0) return( <button key={index} onClick={() => setMargen(margen)}>Sin margen</button>)
+      else return( <button key={index} onClick={() => setMargen(margen)}>Margen</button>)
+    })
+  }
 
   const renderButtons = colors => {
     return colors.map( (color, index) => {
-      return ( <button className={`${color} m-1 btn btn-dark`} key={index}
-        
+      return ( <button className={`${color} m-1 btn btn-dark`} key={index}        
         onClick={() => setColor(color)}>{colors[index]}
       </button>)
     })
@@ -61,7 +71,7 @@ const Imgmeme = ()=>{
               <figure className="position-relative bg-dark" id="exportar">
                 <p className={ `${color} w-100 px-40 position-absolute top-0 start-25 h2`}>{toptextmeme} </p>
                 <p className={`${color} w-100 px-40 position-absolute bottom-0 start-25 h2`}>{bottomtextmeme} </p> 
-                <img src={`./memes/${imgmeme}.jpg`}  className="figure-img w-100 h-80 mt-5 mb-5 d-block m-auto" alt="meme" />
+                <img src={`./memes/${imgmeme}.jpg`}  className={`figure-img w-100 h-80 ${margen} d-block m-auto`} alt="meme" />
               </figure>
             </div>
             <h3 className='mt-3 mb-3 text-center'>Ingrese el texto del meme</h3>
@@ -73,6 +83,9 @@ const Imgmeme = ()=>{
             <h3 className='mt-3 mb-3 text-center'>Elegí color de texto</h3>
             <div>
               { renderButtons(colors) }
+            </div>
+            <div>
+              {conMargen(margin)}
             </div>
     </div>
           </div>
