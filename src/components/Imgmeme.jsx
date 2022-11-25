@@ -61,7 +61,7 @@ const Imgmeme = ()=>{
           <div className='col-8 col-sm-18 col-md-6'>
             <h1 className='mt-3 mb-3 text-center text-white'>Editá tu propio meme</h1>
             <img src="./memes/Wait-A-Minute-Memes.jpeg" className='meme-inicio'/>
-            <h3 className='mt-3 mb-3 text-center text-white'>Elegí tu meme</h3>
+            <h5 className='mt-3 mb-3 text-center text-white'>Elegí tu meme</h5>
             <select onChange={seleccionarImg} className='form-select form-select-lg mb-3 w-50 m-auto' arial-label=".form-select-lg example" >
               <option value={1}>Coreanita</option>
               <option value={2}>Bob esponja</option>
@@ -76,14 +76,16 @@ const Imgmeme = ()=>{
                 <img src={`./memes/${imgmeme}.jpg`}  className={`figure-img w-100 h-80 ${margen} d-block m-auto`} alt="meme" />
               </figure>
             </div>
-            <h3 className='mt-3 mb-3 text-center text-white'>Ingrese el texto del meme</h3>
+            <h5 className='mt-3 mb-3 text-center text-white'>Ingrese el texto del meme</h5>
             <input onChange={topText} className='form-control w-50 m-50 m-auto d-block' type="text" placeholder="Texto superior" name="meme" arial-label="default input example" ></input>
             <input onChange={bottomText} className='form-control w-50 m-50 m-auto d-block mt-3' type="text" placeholder="Texto inferior" name="meme" arial-label="default input example" ></input>
 
             <button onClick={Descargar} type="button" className='btn btn-primary mt-3 mb-4'>Descargar meme</button>
             <div>
-            <h3 className='mt-3 mb-3 text-center text-white'>Personalizalo</h3>
+            <div className='d-flex align-items-center justify-content-center'>
+            <span className='titulo'><h3 className='mt-3 mb-3 text-center text-white'>Personalizalo</h3></span>
             <img src='./memes/icons8-salt-bae-50.png'/>
+            </div>
             <h3 className='mt-3 mb-3 text-center text-white'>Elegí color de texto</h3>
             <div>
               { renderButtons(colors) }
