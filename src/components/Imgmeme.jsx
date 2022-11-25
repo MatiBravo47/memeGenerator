@@ -59,7 +59,7 @@ const Imgmeme = ()=>{
       <div className='text-center container'>
         <div className='row d-flex justify-content-center'>
           <div className='col-12 col-sm-18 col-md-6'>
-            <h1 className='mt-3 mb-3 text-center text-white'>Editá tu propio meme</h1>
+            <h1 className='mt-3 mb-3 text-center text-white'>Editá tu meme</h1>
             <img src="./memes/Wait-A-Minute-Memes.jpeg" className='meme-inicio'/>
             <h5 className='mt-3 mb-3 text-center text-white'>Elegí tu meme</h5>
             <select onChange={seleccionarImg} className='form-select form-select-lg mb-3 w-50 m-auto' arial-label=".form-select-lg example" >
