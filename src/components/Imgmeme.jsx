@@ -6,11 +6,8 @@ import './Colors.css';
 
 const Imgmeme = ()=>{
 
-  const [color, setColor] = useState('white')
-
+// Margenes ---------------------------------------
   const [margen, setMargen] = useState('mt-3')
-
-  const colors = ['blanco', 'amarillo', 'rojo', 'azul', 'verde']
 
   const margin = ['mt-5 mb-5', '']
 
@@ -22,22 +19,19 @@ const Imgmeme = ()=>{
       return( <button className="btn btn-dark m-1" key={index} onClick={() => setMargen(margen)}>Quitar margen</button>)
     })
   }
-
+// COLORS------------------------------------------------------ 
+  const [color, setColor] = useState('white')
+  const colors = ['blanco', 'amarillo', 'rojo', 'azul', 'verde']
   const renderButtons = colors => {
     return colors.map( (color, index) => {
-      return ( <button className={`${color} m-1 btn btn-dark `} key={index}        
-        onClick={() => setColor(color)}>{colors[index]}
+      return ( <button className={`bg-${color} button button5`} key={index}        
+        onClick={() => setColor(color)}>
       </button>)
     })
   }
-    const [imgmeme, setImgmeme] = useState(1);
+// TEXTO---------------------------------
     const [toptextmeme, setTopTextmeme] = useState();
     const [bottomtextmeme, setBottomTextmeme] = useState();
-
-    const seleccionarImg = (e) => {
-        setImgmeme(e.target.value);
-    }
-
     const topText = (e) => {
         setTopTextmeme(e.target.value);
     }
@@ -45,6 +39,13 @@ const Imgmeme = ()=>{
         setBottomTextmeme(e.target.value);
     }
 
+//Seleccionar imagen---------------------------
+    const [imgmeme, setImgmeme] = useState(1);
+
+    const seleccionarImg = (e) => {
+      setImgmeme(e.target.value);
+    }
+//Exportar imagen ------------------
     const Descargar = (e) => {
         html2canvas(document.querySelector("#exportar")).then(function(canvas) {
             let img = canvas.toDataURL("memes/jpg");
@@ -60,7 +61,7 @@ const Imgmeme = ()=>{
         <div className='row d-flex justify-content-center'>
           <div className='col-12 col-sm-18 col-md-6'>
             <h1 className='mt-3 mb-3 text-center text-white'>Editá tu meme</h1>
-            <img src="./memes/Wait-A-Minute-Memes.jpeg" className='meme-inicio'/>
+            <img src="./memes/Wait-A-Minute-Memes.jpeg" className='w-100 d-block m-auto meme-inicio'/>
             <h5 className='mt-3 mb-3 text-center text-white'>Elegí tu meme</h5>
             <select onChange={seleccionarImg} className='form-select form-select-lg mb-3 w-50 m-auto' arial-label=".form-select-lg example" >
               <option value={1}>Coreanita</option>
@@ -69,11 +70,11 @@ const Imgmeme = ()=>{
               <option value={4}>Pikachu</option>
               <option value={5}>Sainz</option>
             </select>
-            <div className='d-flex justify-content-center border border-light'>
-              <figure className="position-relative bg-dark" id="exportar">
+            <div className='d-flex justify-content-center '>
+              <figure className="position-relative bg-dark border border-light" id="exportar">
                 <p className={ `${color} w-100 px-40 position-absolute top-0 start-25 h2`}>{toptextmeme} </p>
                 <p className={`${color} w-100 px-40 position-absolute bottom-0 start-25 h2`}>{bottomtextmeme} </p> 
-                <img src={`./memes/${imgmeme}.jpg`}  className={`figure-img w-100 h-80 ${margen} d-block m-auto`} alt="meme" />
+                <img src={`./memes/${imgmeme}.jpg`}  className={`figure-img w-100 ${margen} d-block m-auto`} alt="meme" />
               </figure>
             </div>
             <h5 className='mt-3 mb-3 text-center text-white'>Ingrese el texto del meme</h5>

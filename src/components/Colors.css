@@ -2,10 +2,6 @@
   html{
     background-color: #282C34;
   }
-  .meme-inicio{
-    width: 300px;
-    height: 300px;
-  }
   
   .color-selector:hover {
     cursor: pointer;
@@ -13,23 +9,34 @@
   li{
     text-decoration: none;
   }
-  
+  .bg-amarillo{
+    background-color: yellow;
+  }
   .amarillo {
     color:yellow;
   }
-  
+  .bg-rojo{
+  background-color: Coral;
+  }
   .rojo {
     color: Coral;
   }
   
+  .bg-azul {
+    background-color: RoyalBlue;
+  }
   .azul {
     color: RoyalBlue;
   }
-  
+  .bg-verde{
+    background-color: PaleGreen;
+  }
   .verde {
     color: PaleGreen;
   }
-  
+  .bg-blanco{
+    background-color: WhiteSmoke;
+  }
   .blanco {
     color: WhiteSmoke;
   }
