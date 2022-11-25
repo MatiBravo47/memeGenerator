@@ -80,7 +80,7 @@ const Imgmeme = ()=>{
             <input onChange={topText} autocomplete="off" className='form-control w-50 m-50 m-auto d-block' type="text" placeholder="Texto superior" name="meme" arial-label="default input example" ></input>
             <input onChange={bottomText} autocomplete="off" className='form-control w-50 m-50 m-auto d-block mt-3' type="text" placeholder="Texto inferior" name="meme" arial-label="default input example" ></input>
 
-            <button onClick={Descargar} type="button" className='btn btn-primary mt-3 mb-4'>Descargar meme</button>
+            <button onClick={Descargar} type="button" className='btn btn-primary mt-3 mb-4'>Descargar</button>
             <div>
             <div className='d-flex align-items-center justify-content-center'>
               <span className='titulo'><h3 className='mt-3 mb-3 text-center text-white'>Personalizalo</h3></span>
