@@ -77,18 +77,18 @@ const Imgmeme = ()=>{
               </figure>
             </div>
             <h5 className='mt-3 mb-3 text-center text-white'>Ingrese el texto del meme</h5>
-            <input onChange={topText} className='form-control w-50 m-50 m-auto d-block' type="text" placeholder="Texto superior" name="meme" arial-label="default input example" ></input>
-            <input onChange={bottomText} className='form-control w-50 m-50 m-auto d-block mt-3' type="text" placeholder="Texto inferior" name="meme" arial-label="default input example" ></input>
+            <input onChange={topText} autocomplete="off" className='form-control w-50 m-50 m-auto d-block' type="text" placeholder="Texto superior" name="meme" arial-label="default input example" ></input>
+            <input onChange={bottomText} autocomplete="off" className='form-control w-50 m-50 m-auto d-block mt-3' type="text" placeholder="Texto inferior" name="meme" arial-label="default input example" ></input>
 
             <button onClick={Descargar} type="button" className='btn btn-primary mt-3 mb-4'>Descargar meme</button>
             <div>
             <div className='d-flex align-items-center justify-content-center'>
-            <span className='titulo'><h3 className='mt-3 mb-3 text-center text-white'>Personalizalo</h3></span>
-            <img src='./memes/icons8-salt-bae-50.png'/>
+              <span className='titulo'><h3 className='mt-3 mb-3 text-center text-white'>Personalizalo</h3></span>
+              <img src='./memes/icons8-salt-bae-50.png'/>
             </div>
             <h3 className='mt-3 mb-3 text-center text-white'>Elegí color de texto</h3>
             <div>
-              { renderButtons(colors) }
+              {renderButtons(colors)}
             </div>
             <div>
               {conMargen(margin)}
