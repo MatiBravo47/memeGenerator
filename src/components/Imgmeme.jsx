@@ -1,30 +1,40 @@
 import html2canvas from 'html2canvas';
 import React, {useState} from 'react';
-import './Imgmeme.css'
+import './Imgmeme.css';
+import './Colors.css';
+
 
 const Imgmeme = ()=>{
 
+  const [color, setColor] = useState('white')
+
+  const colors = ['blanco', 'amarillo', 'rojo', 'azul', 'verde']
+
+  const renderButtons = colors => {
+    return colors.map( (color, index) => {
+      return ( <button className={`${color} m-1 btn btn-dark`} key={index}
+        
+        onClick={() => setColor(color)}>{colors[index]}
+      </button>)
+    })
+  }
     const [imgmeme, setImgmeme] = useState(1);
     const [toptextmeme, setTopTextmeme] = useState();
     const [bottomtextmeme, setBottomTextmeme] = useState();
 
     const seleccionarImg = (e) => {
         setImgmeme(e.target.value);
-        console.log(e.target.value);
     }
 
     const topText = (e) => {
         setTopTextmeme(e.target.value);
-        console.log(e.target.value);
     }
     const bottomText = (e) => {
         setBottomTextmeme(e.target.value);
-        console.log(e.target.value);
     }
 
     const Descargar = (e) => {
         html2canvas(document.querySelector("#exportar")).then(function(canvas) {
-            {/*document.body.appendChild(canvas);*/}
             let img = canvas.toDataURL("memes/jpg");
             let link = document.createElement("a");
             link.download = "memegenerator.jpg";
@@ -49,20 +59,22 @@ const Imgmeme = ()=>{
             </select>
             <div className='d-flex justify-content-center'>
               <figure className="position-relative bg-dark" id="exportar">
-                <p className="w-100 px-40 position-absolute top-0 start-25 h2 text-white">{toptextmeme} </p>
-                <p className="w-100 px-40 position-absolute bottom-0 start-25 h2 text-white">{bottomtextmeme} </p> 
+                <p className={ `${color} w-100 px-40 position-absolute top-0 start-25 h2`}>{toptextmeme} </p>
+                <p className={`${color} w-100 px-40 position-absolute bottom-0 start-25 h2`}>{bottomtextmeme} </p> 
                 <img src={`./memes/${imgmeme}.jpg`}  className="figure-img w-100 h-80 mt-5 mb-5 d-block m-auto" alt="meme" />
               </figure>
             </div>
             <h3 className='mt-3 mb-3 text-center'>Ingrese el texto del meme</h3>
-            <input onChange={topText} className='form-control w-50 m-50 m-auto d-block te' type="text" placeholder="Texto superior" name="meme" arial-label="default input example" ></input>
+            <input onChange={topText} className='form-control w-50 m-50 m-auto d-block' type="text" placeholder="Texto superior" name="meme" arial-label="default input example" ></input>
             <input onChange={bottomText} className='form-control w-50 m-50 m-auto d-block mt-3' type="text" placeholder="Texto inferior" name="meme" arial-label="default input example" ></input>
-            
-            <label for="exampleColorInput" class="form-label">Color picker</label>
-            <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color"></input>
-            
-            <button onClick={Descargar} type="button" className='btn btn-primary mt-3 mb-4'>Descargar meme</button>
 
+            <button onClick={Descargar} type="button" className='btn btn-primary mt-3 mb-4'>Descargar meme</button>
+            <div>
+            <h3 className='mt-3 mb-3 text-center'>Elegí color de texto</h3>
+            <div>
+              { renderButtons(colors) }
+            </div>
+    </div>
           </div>
         </div>
       </div>

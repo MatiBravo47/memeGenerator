@@ -1,0 +1,28 @@
+/* App.css */  
+  
+  .color-selector:hover {
+    cursor: pointer;
+  }
+  li{
+    text-decoration: none;
+  }
+  
+  .amarillo {
+    color:yellow;
+  }
+  
+  .rojo {
+    color: Coral;
+  }
+  
+  .azul {
+    color: RoyalBlue;
+  }
+  
+  .verde {
+    color: PaleGreen;
+  }
+  
+  .blanco {
+    color: WhiteSmoke;
+  }
