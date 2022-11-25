@@ -16,14 +16,16 @@ const Imgmeme = ()=>{
 
   const conMargen = margin => {
     return margin.map((margen, index) => {
-      if (index=0) return( <button key={index} onClick={() => setMargen(margen)}>Sin margen</button>)
-      else return( <button key={index} onClick={() => setMargen(margen)}>Margen</button>)
+      if (index==0) {
+        return( <button className="btn btn-dark m-1" key={index} onClick={() => setMargen(margen)}>Agregar margen</button>)
+      }
+      return( <button className="btn btn-dark m-1" key={index} onClick={() => setMargen(margen)}>Quitar margen</button>)
     })
   }
 
   const renderButtons = colors => {
     return colors.map( (color, index) => {
-      return ( <button className={`${color} m-1 btn btn-dark`} key={index}        
+      return ( <button className={`${color} m-1 btn btn-dark `} key={index}        
         onClick={() => setColor(color)}>{colors[index]}
       </button>)
     })
@@ -51,7 +53,6 @@ const Imgmeme = ()=>{
             link.href = img;
             link.click();
         });
-
     }
 
     return(
