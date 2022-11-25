@@ -58,7 +58,7 @@ const Imgmeme = ()=>{
     return(
       <div className='text-center container'>
         <div className='row d-flex justify-content-center'>
-          <div className='col-8 col-sm-18 col-md-6'>
+          <div className='col-12 col-sm-18 col-md-6'>
             <h1 className='mt-3 mb-3 text-center text-white'>Editá tu propio meme</h1>
             <img src="./memes/Wait-A-Minute-Memes.jpeg" className='meme-inicio'/>
             <h5 className='mt-3 mb-3 text-center text-white'>Elegí tu meme</h5>
