@@ -5,7 +5,7 @@
 </h4
 
 ```bash
-git clone https://github.com/MatiBravo47/TATETI.git
+git clone https://github.com/MatiBravo47/memeGenerator.git
 cd memeGenerator
 npm install
 npm run dev (creado con vite)
