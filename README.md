@@ -7,7 +7,9 @@
 ```bash
 git clone https://github.com/MatiBravo47/memeGenerator.git
 cd memeGenerator
-npm install
+venv\Scripts\activate
+pip install -r requirements.txt
+pip list
 npm run dev 
 ```
 
