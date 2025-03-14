@@ -2,7 +2,7 @@
 
 <h4 align="center">
 :construction: Proyecto en construcción :construction:
-</h4
+</h4>
 
 ```bash
 git clone https://github.com/MatiBravo47/memeGenerator.git
